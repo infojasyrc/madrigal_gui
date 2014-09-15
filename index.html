@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <title>MADRIGAL DATABASE:::</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+        }
+    </style>
+
+</head>
+<body>
+<!-- container -->
+<div class="container">
+    <div ng-app="madrigalApp">
+        <!-- header -->
+        <div ng-controller="menuController" ng-include="viewUrl"></div>
+        <!-- end header -->
+
+        <!-- content -->
+        <div class="col-md-10 block-content background-gray">
+            <div ng-view=""></div>
+        </div>
+        <!-- end content -->
+    </div>
+
+    <footer class="row">
+        <div class="span6">
+            <p>MIT Haystack Observatory</p>
+        </div>
+        <div class="span6" style="text-align:right">
+            <p>
+                &copy; <a href="#">Madrigal Administrator</a> 2014
+                |
+                <a href="#">license</a>
+            </p>
+        </div>
+    </footer>
+
+</div>
+<!-- container -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-route.js"></script>
+
+<script src="scripts/madrigal.js"></script>
+<script src="scripts/controllers/base/menuController.js"></script>
+<script src="scripts/controllers/presentation/presentation.js"></script>
+
+</body>
+</html>

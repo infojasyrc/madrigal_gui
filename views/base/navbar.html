@@ -1,0 +1,47 @@
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <ul class="nav">
+                <li ng-class="{true: 'active'}[ActiveURL('/')]">
+                    <a ng-click="redirect('/')">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a ng-click="redirect('/local_data')">
+                        Local Data
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Full Data Access
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Run Models
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Documentation
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Web access</a></li>
+                        <li><a href="#">Script access</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        Tutorial
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.openmadrigal.org">
+                        Open Madrigal
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
