@@ -3,44 +3,40 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
     <title>MADRIGAL DATABASE:::</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <style type="text/css">
-        body {
-            padding-top: 60px;
-        }
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:400,600,300,700">
+    <link rel="stylesheet" type="text/css" href="styles/main.css"/>
 </head>
 <body>
 <!-- container -->
 <div class="container">
-    <div ng-app="madrigalApp">
+    <div class="row" ng-app="madrigalApp">
         <!-- header -->
         <div ng-controller="menuController" ng-include="viewUrl"></div>
         <!-- end header -->
 
         <!-- content -->
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div ng-view=""></div>
         </div>
         <!-- end content -->
     </div>
-
-    <footer class="row">
-        <div class="col-md-6">
-            <p>MIT Haystack Observatory</p>
-        </div>
-        <div class="col-md-6" style="text-align:right">
-            <p>
-                &copy; <a href="#">Madrigal Administrator</a> 2014
-                |
-                <a href="#">license</a>
-            </p>
-        </div>
-    </footer>
-
+    <div class="divider"></div>
+    <div class="row">
+        <footer class="col-md-12">
+            <div class="col-md-6">
+                <p>MIT Haystack Observatory</p>
+            </div>
+            <div class="col-md-6" style="text-align:right">
+                <p>
+                    &copy; <a href="#">Madrigal Administrator</a> 2014
+                    |
+                    <a href="#">license</a>
+                </p>
+            </div>
+        </footer>
+    </div>
 </div>
 <!-- container -->
 
