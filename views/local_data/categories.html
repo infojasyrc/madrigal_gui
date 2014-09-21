@@ -3,15 +3,16 @@
         <label>Categories:</label>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <select id="lst_categories">
-                <option value="0">
-                    Choose instrument type:
-                </option>
-                <option value="{{ category.id }}">
-                    {{ category.name }}
-                </option>
-            </select>
-        </div>
+        <select id="lst_categories"
+                ng-model="info.data.categoryID"
+                ng-change="onChangeCategory()">
+            <option value="">
+                Choose instrument type:
+            </option>
+            <option ng-repeat="category in categoriesList"
+                    value="{{ category.id }}">
+                {{ category.name }}
+            </option>
+        </select>
     </div>
 </div>

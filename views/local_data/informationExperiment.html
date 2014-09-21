@@ -1,0 +1,60 @@
+<form action="" method="post">
+    <div class="row-fluid">
+        <div class="span12">
+            <table class="table table-bordered table-hover">
+                <tbody>
+                <tr>
+                    <td>
+                        <!-- Show this when is just one experiment -->
+                        <label>Experiment:</label>
+                        <!-- else -->
+                        <label>Select Experiment: </label>
+                    </td>
+                    <td>
+                        <!-- Show this when is just one experiment -->
+                        <label></label>
+                        <!-- else show a list of experiments -->
+                        <select name="selectExperimentId"
+                                id="selectExperimentId">
+                            <option value="-1">Choose an experiment</option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <!-- Show this when is just one experiment -->
+                <tr>
+                    <td><label>Period:</label></td>
+                    <td><label>Inicio - Fin</label></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Select File:</label>
+                    </td>
+                    <td>
+                        <select name="selectFile" id="selectFile">
+                            <option value="0">
+                                Choose a file
+                            </option>
+                            <option value="">
+                                Text
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Selected date:</label></td>
+                    <td><label></label></td>
+                </tr>
+
+                <tr>
+                    <td><label>PI:</label></td>
+                    <td><label></label></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>

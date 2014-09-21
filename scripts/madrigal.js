@@ -3,10 +3,10 @@
  * email: infojasyrc@gmail.com
  */
 
-var madrigalApp = angular.module('madrigalApp', ['ngRoute']);
+var madrigalApp = angular.module('madrigalApp', ['ngRoute', 'ngCookies']);
 
 // configuring the routeProvider for each link
-madrigalApp.config(function ($routeProvider) {
+madrigalApp.config(function ($routeProvider, $httpProvider) {
     $routeProvider
         .when('/', {
             controller: 'presentationController',
@@ -15,10 +15,13 @@ madrigalApp.config(function ($routeProvider) {
 
         .when('/local_data', {
             controller: 'localDataController',
-            templateUrl: 'views/local_data/categories.html'
+            templateUrl: 'views/local_data/localData.html'
         })
 
         .otherwise({
             redirectTo: '/'
         });
+
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    //$httpProvider.defaults.withCredentials = true;
 });

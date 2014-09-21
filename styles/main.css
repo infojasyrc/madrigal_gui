@@ -12,3 +12,19 @@ body {
     margin: 5px 10px;
     background-color: #e5e5e5;
 }
+
+.content-left-header-content,
+.content-info-experiment,
+.content-calendar {
+    margin: 0px;
+    border: 0px solid #f00;
+}
+
+.content-left-header-content select {
+    height: 30px;
+    line-height: 30px;
+}
+
+.with-complete-width {
+    width: 100%;
+}
