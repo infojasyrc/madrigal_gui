@@ -1,20 +1,20 @@
 <div class="col-md-12">
     <div class="row">
         <div class="col-md-12">
-            <label>
-                Year:
-            </label>
+            <label>Year:</label>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <select id="lstYears"
-                    class="">
+                    class="select-with-fixed-height"
+                    ng-model="info.data.year">
                 <option value="">
                     Select a year:
                 </option>
-                <option value="">
-
+                <option value=""
+                        ng-repeat="element in yearList">
+                    {{element.year}}
                 </option>
             </select>
         </div>

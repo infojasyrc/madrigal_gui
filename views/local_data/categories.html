@@ -1,18 +1,23 @@
 <div class="col-md-12">
     <div class="row">
-        <label>Categories:</label>
+        <div class="col-md-12">
+            <label>Categories:</label>
+        </div>
     </div>
     <div class="row">
-        <select id="lst_categories"
-                ng-model="info.data.categoryID"
-                ng-change="onChangeCategory()">
-            <option value="">
-                Choose instrument type:
-            </option>
-            <option ng-repeat="category in categoriesList"
-                    value="{{ category.id }}">
-                {{ category.name }}
-            </option>
-        </select>
+        <div class="col-md-12">
+            <select id="lst_categories"
+                    class="select-with-fixed-height"
+                    ng-model="info.data.categoryID"
+                    ng-change="onChangeCategory()">
+                <option value="">
+                    Choose instrument type:
+                </option>
+                <option ng-repeat="category in categoriesList"
+                        value="{{ category.id }}">
+                    {{ category.name }}
+                </option>
+            </select>
+        </div>
     </div>
 </div>

@@ -1,17 +1,23 @@
 <div class="col-md-12">
     <div class="row">
-        <label>Instruments:</label>
+        <div class="col-md-12">
+            <label>Instruments:</label>
+        </div>
     </div>
     <div class="row">
-        <select id="lstInstruments"
-                ng-model="info.data.instrumentID">
-            <option value="">
-                Select an instrument:
-            </option>
-            <option ng-repeat="instrument in instrumentList"
-                    value="{{ instrument.kinst }}">
-                {{ instrument.name }}
-            </option>
-        </select>
+        <div class="col-md-12">
+            <select id="lstInstruments"
+                    class="select-with-fixed-height"
+                    ng-model="info.data.instrumentID"
+                    ng-change="onChangeInstrument()">
+                <option value="">
+                    Select an instrument:
+                </option>
+                <option ng-repeat="instrument in instrumentList"
+                        value="{{ instrument.kinst }}">
+                    {{ instrument.name }} {{ instrument.local_start_year }} - {{ instrument.local_end_year }}
+                </option>
+            </select>
+        </div>
     </div>
 </div>

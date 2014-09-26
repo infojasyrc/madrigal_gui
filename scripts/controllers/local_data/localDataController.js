@@ -4,14 +4,15 @@
  */
 
 madrigalApp.controller(
-    "localDataController", ["$scope", "categoriesService", "instrumentsService",
-    function ($scope, categoriesService, instrumentsService) {
+    "localDataController", ["$scope", "categoriesService", "instrumentsService", "yearMonthsService",
+    function ($scope, categoriesService, instrumentsService, yearMonthsService) {
         "use strict";
 
         $scope.categoriesList = [];
         $scope.instrumentList = [];
         $scope.viewCategoriesUrl = 'views/local_data/categories.html';
         $scope.viewInstrumentstUrl = 'views/local_data/instruments.html';
+        $scope.viewYearsUrl = 'views/local_data/years.html';
         $scope.viewCalendarUrl = 'views/local_data/calendar.html';
         $scope.viewInformationExperimentUrl = 'views/local_data/informationExperiment.html';
         $scope.info = {
@@ -23,10 +24,6 @@ madrigalApp.controller(
                 $scope.categoriesList = data;
             });
 
-        $scope.init = function () {
-            console.log("Loading");
-        };
-
         $scope.onChangeCategory = function() {
             instrumentsService.getData($scope.info.data.categoryID)
                 .then(function (data) {
@@ -34,6 +31,11 @@ madrigalApp.controller(
                 });
         };
 
-        $scope.init();
+        $scope.onChangeInstrument = function() {
+            yearMonthsService.getData($scope.info.data.instrumentID)
+                .then(function (data) {
+                    $scope.yearList = data;
+                });
+        };
 
     }]);

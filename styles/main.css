@@ -20,7 +20,7 @@ body {
     border: 0px solid #f00;
 }
 
-.content-left-header-content select {
+.select-with-fixed-height {
     height: 30px;
     line-height: 30px;
 }
