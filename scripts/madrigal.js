@@ -3,7 +3,7 @@
  * email: infojasyrc@gmail.com
  */
 
-var madrigalApp = angular.module('madrigalApp', ['ngRoute', 'ngCookies']);
+var madrigalApp = angular.module('madrigalApp', ['ngRoute', 'ngCookies', 'ui.bootstrap']);
 
 // configuring the routeProvider for each link
 madrigalApp.config(function ($routeProvider, $httpProvider) {

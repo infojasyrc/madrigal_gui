@@ -28,3 +28,8 @@ body {
 .with-complete-width {
     width: 100%;
 }
+
+.calendar-component {
+    display:inline-block;
+    min-height:290px;
+}
