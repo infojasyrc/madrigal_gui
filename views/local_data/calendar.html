@@ -1,9 +1,8 @@
-<div class="col-md-12">
-    <div class="calendar-component">
-        <datepicker ng-model="dt"
-                    min-date="minDate"
-                    show-weeks="true"
-                    class="well well-sm">
-        </datepicker>
-    </div>
+
+<div class="calendar-component">
+    <div ui-calendar="uiConfig.calendar"
+         class="calendar"
+         calendar="calendar"
+         ng-model="eventSources">
+         </div>
 </div>
